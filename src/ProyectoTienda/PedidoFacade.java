@@ -13,7 +13,7 @@ public class PedidoFacade {
         Producto producto = factory.crearProducto(nombreProducto, precio);
 
         
-        Pedido pedido = new Pedido();
+        Pedido pedido = new Pedido(cliente);
         pedido.agregarObservador(cliente);
 
         gestorCliente.registrarCliente(cliente.getNombre());

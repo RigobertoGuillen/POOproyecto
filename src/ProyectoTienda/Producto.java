@@ -1,6 +1,7 @@
 package ProyectoTienda;
 public abstract class Producto {
 
+    protected int id;
     protected String nombre;
     protected double precio;
 
@@ -11,8 +12,25 @@ public abstract class Producto {
 
     public abstract void mostrarDetalle();
 
+    public abstract String getTipo();
+
     public double getPrecio() {
         return precio;
     }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public void setPrecio(double precio) {
+        this.precio = precio;
+    }
+
+
+    public abstract void guardarEnBD();
     
 }

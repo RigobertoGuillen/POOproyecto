@@ -1,11 +1,19 @@
 package ProyectoTienda;
 public class ProductoRopa extends Producto {
-    public ProductoRopa(String nombre, double precio) {
+    private String talla;
+
+    public ProductoRopa(String nombre, double precio, String talla) {
         super(nombre, precio);
+        this.talla = talla;
     }
 
     @Override
     public void mostrarDetalle() {
         System.out.println("Ropa: " + nombre + " - L" + precio);
+    }
+
+    @Override
+    public String getTipo() {
+        return "ropa";
     }
 }
