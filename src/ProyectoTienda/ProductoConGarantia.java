@@ -13,5 +13,15 @@ public class ProductoConGarantia extends ProductoDecorador{
         productoOriginal.mostrarDetalle();
         System.out.println("Incluye garantía de " + años + " años.");
     }
+
+    @Override
+    public String getTipo() {
+        return null;
+    }
+
+    @Override
+    public void guardarEnBD() {
+        
+    }
     
 }

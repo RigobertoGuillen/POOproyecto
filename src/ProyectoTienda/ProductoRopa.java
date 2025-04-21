@@ -16,4 +16,9 @@ public class ProductoRopa extends Producto {
     public String getTipo() {
         return "ropa";
     }
+
+    @Override
+    public void guardarEnBD() {
+        
+    }
 }

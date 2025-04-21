@@ -1,7 +1,7 @@
 package ProyectoTienda;
 public class ProductoAccesorio extends Producto{
 
-    private String material;
+   private String material;
 
     public ProductoAccesorio(String nombre, double precio, String material) {
         super(nombre, precio);
@@ -16,6 +16,11 @@ public class ProductoAccesorio extends Producto{
     @Override
     public String getTipo() {
         return "accesorio";
+    }
+
+    @Override
+    public void guardarEnBD() {
+        
     }
 
 

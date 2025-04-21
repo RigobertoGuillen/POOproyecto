@@ -5,10 +5,11 @@ public class PedidoFacade {
     private GestorPago gestorPago = new GestorPago();
     private GestorFactura gestorFactura = new GestorFactura();
 
-    public void realizarPedido(String nombreCliente, String nombreProducto, double precio, String categoria, String metodoPago) {
+    public void realizarPedido(String nombreCliente, String correo, String telefono, String direccion, 
+                              String nombreProducto, double precio, String categoria, String metodoPago) {
         System.out.println("Iniciando proceso de pedido...\n");
 
-        Cliente cliente = new Cliente(nombreCliente);
+        Cliente cliente = new Cliente(nombreCliente, "correo@ejemplo.com", "123456789", "direccion de prueba" );
         ProductoFactory factory = ProductoFactorySelector.getFactory(categoria);
         Producto producto = factory.crearProducto(nombreProducto, precio);
 

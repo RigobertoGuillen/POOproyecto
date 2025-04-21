@@ -18,5 +18,15 @@ public class ProductoConDescuento extends ProductoDecorador{
     public double getPrecio() {
         return productoOriginal.getPrecio() * (1 - porcentajeDescuento);
     }
+
+    @Override
+    public String getTipo() {
+        return null;
+    }
+
+    @Override
+    public void guardarEnBD() {
+        
+    }
     
 }

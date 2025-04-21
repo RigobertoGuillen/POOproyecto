@@ -28,9 +28,7 @@ public class App {
 
        
 
-        PedidoFacade pedidoFacade = new PedidoFacade();
-        pedidoFacade.realizarPedido("Lucía Romero", "Laptop HP", 1200.0, "electronico", "tarjeta");
-        pedidoFacade.realizarPedido("Pedro López", "Camisa", 30.0, "ropa", "paypal");
+        
     }
     }
     
