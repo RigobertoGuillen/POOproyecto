@@ -7,6 +7,14 @@ public class ProductoElectronico extends Producto{
 
     private int garantiaMeses;
 
+    public int getGarantiaMeses() {
+        return garantiaMeses;
+    }
+
+    public void setGarantiaMeses(int garantiaMeses) {
+        this.garantiaMeses = garantiaMeses;
+    }
+
     public ProductoElectronico(String nombre, double precio, int garantiaMeses) {
         super(nombre, precio);
         this.garantiaMeses = garantiaMeses;

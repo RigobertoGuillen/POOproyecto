@@ -1,4 +1,5 @@
 package ProyectoTienda;
+
 public class ProductoAccesorio extends Producto{
 
    private String material;

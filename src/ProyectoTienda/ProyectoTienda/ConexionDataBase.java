@@ -8,7 +8,7 @@ public class ConexionDataBase {
     private Connection conexion;
     private final String url = "jdbc:postgresql://localhost:5432/Tienda";
     private final String usuario = "postgres";
-    private final String contraseña = "tu_contraseña";
+    private final String contraseña = "admin";
 
     private ConexionDataBase() {
         try {

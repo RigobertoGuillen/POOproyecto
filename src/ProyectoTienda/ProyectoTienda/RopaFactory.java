@@ -1,4 +1,5 @@
 package ProyectoTienda;
+
 public class RopaFactory implements ProductoFactory{
 
     @Override

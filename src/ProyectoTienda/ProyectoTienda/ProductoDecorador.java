@@ -1,4 +1,5 @@
 package ProyectoTienda;
+
 public abstract class ProductoDecorador extends Producto {
 
     protected Producto productoOriginal;

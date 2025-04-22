@@ -57,6 +57,10 @@ public class Pedido {
         return estado;
     }
 
+    public void setEstado(String estado) {
+        this.estado = estado;
+    }
+
     public Pedido(Cliente cliente) {
         this.cliente = cliente;
         this.productos = new ArrayList<>();

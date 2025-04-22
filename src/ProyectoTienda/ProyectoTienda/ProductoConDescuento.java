@@ -1,4 +1,5 @@
 package ProyectoTienda;
+
 public class ProductoConDescuento extends ProductoDecorador{
 
     private double porcentajeDescuento;

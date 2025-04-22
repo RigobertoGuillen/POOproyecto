@@ -1,4 +1,5 @@
 package ProyectoTienda;
+
 public class ProductoConGarantia extends ProductoDecorador{
 
     private int años;

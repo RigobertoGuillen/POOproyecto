@@ -1,4 +1,5 @@
 package ProyectoTienda;
+
 public class ProductoFactorySelector {
     
     public static ProductoFactory getFactory(String categoria) {
