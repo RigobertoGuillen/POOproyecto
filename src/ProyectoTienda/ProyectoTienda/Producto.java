@@ -4,15 +4,14 @@ public abstract class Producto {
     protected int id;
     protected String nombre;
     protected double precio;
-
+    
+    
     public Producto(String nombre, double precio) {
         this.nombre = nombre;
         this.precio = precio;
     }
 
-    public abstract void mostrarDetalle();
-
-    public abstract String getTipo();
+   
 
     public double getPrecio() {
         return precio;
@@ -30,7 +29,18 @@ public abstract class Producto {
         this.precio = precio;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public abstract void guardarEnBD();
+
+    public abstract void mostrarDetalle();
+
+    public abstract String getTipo();
     
 }

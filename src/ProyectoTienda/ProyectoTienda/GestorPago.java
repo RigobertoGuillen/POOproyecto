@@ -7,14 +7,28 @@ public class GestorPago {
         this.metodoPago = metodo;
     }
 
-    public void procesarPago(double monto) {
+    public void procesarPago(String metodoPago, double monto) {
+        MetodoPago metodo;
+        switch (metodoPago.toLowerCase()) {
+            case "tarjeta":
+                metodo = new PagoTarjeta();
+                break;
+            case "paypal":
+                metodo = new PagoPayPal();
+                break;
+            case "transferencia":
+                metodo = new PagoTransferencia();
+                break;
+            default:
+                throw new IllegalArgumentException("Método de pago no válido.");
+        }
+        metodo.procesarPago(monto);
+    }
 
-        if (metodoPago == null) {
-            System.out.println("No se ha seleccionado un método de pago.");
-        } else {
-            metodoPago.pagar(monto);
-        } 
+        
        
     }
+
+   
     
-}
+

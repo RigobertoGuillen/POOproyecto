@@ -10,6 +10,8 @@ public class ConexionDataBase {
     private final String usuario = "postgres";
     private final String contraseña = "admin";
 
+
+    //EsTE ES UN CONSTRUCTOR PRIVADO
     private ConexionDataBase() {
         try {
             conexion = DriverManager.getConnection(url, usuario, contraseña);

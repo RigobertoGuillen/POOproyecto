@@ -15,10 +15,9 @@ public class PedidoFacade {
 
         try {
             Connection conn = ConexionDataBase.getInstancia().getConexion();
-            Cliente cliente = new Cliente(nombreCliente, correo, telefono, direccion);
-            ClienteBD clienteDAO = new ClienteBD(conn);
-            int idCliente = clienteDAO.guardarCliente(cliente);
-            cliente.setId(idCliente); // importante para usarlo en el pedido
+            
+            Cliente cliente = gestorCliente.registrarCliente(nombreCliente, correo, telefono, direccion, conn);
+
 
             ProductoFactory factory = ProductoFactorySelector.getFactory(categoria);
             Producto producto = factory.crearProducto(nombreProducto, precio);
@@ -30,22 +29,8 @@ public class PedidoFacade {
             PedidoBD pedidoDAO = new PedidoBD(conn);
             int idPedido = pedidoDAO.guardarPedido(pedido);
 
-            // Procesar método de pago
-            MetodoPago metodo;
-            switch (metodoPago.toLowerCase()) {
-                case "tarjeta":
-                    metodo = new PagoTarjeta();
-                    break;
-                case "paypal":
-                    metodo = new PagoPayPal();
-                    break;
-                case "transferencia":
-                    metodo = new PagoTransferencia();
-                    break;
-                default:
-                    throw new IllegalArgumentException("Método de pago no válido.");
-            }
-            metodo.procesarPago(producto.getPrecio());
+            // Procesar tipo pago 
+            gestorPago.procesarPago(metodoPago, producto.getPrecio());
 
             System.out.println("Producto: ");
             producto.mostrarDetalle();
